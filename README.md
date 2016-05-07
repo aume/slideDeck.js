@@ -19,41 +19,31 @@ Creating, disseminating, and maintaining lecture slides has long been the standa
 =heading
 
 ### List 
-+list
-
-= heading
-
-Item 1
-    Item 1.1
++list__
+=heading__
+Item 1__
+    Item 1.1__
 Item 2
 
 ### HTML editor 
-+codebox
-
-=heading
-
++codebox__
+=heading__
 demo code
 
 ### List with image 
-+limg
-
-=heading
-
-Item 1
-
-Item 2
++limg__
+=heading__
+Item 1__
+Item 2__
 
 -img/picutre.blah
 
 ### Full size image
-+imag
-
-=heading
-
++imag__
+=heading__
 -img/picutre.blah
 
 ## Hidden description, shows up in content browser
-+description
-
-A description of the page
++description__
+A description of the page__
 which is hidden 
