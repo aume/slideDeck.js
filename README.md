@@ -14,36 +14,34 @@ Creating, disseminating, and maintaining lecture slides has long been the standa
 ##The formatting in the text file for the different slides is as such:
 
 ###Title 
-+title
-
++title<br/>
 =heading
 
 ### List 
-+list
-=heading
-Item 1
-    Item 1.1__
++list<br/>
+=heading<br/>
+Item 1<br />
+    Item 1.1<br />
 Item 2
 
 ### HTML editor 
-+codebox__
-=heading__
++codebox<br/>
+=heading<br/>
 demo code
 
 ### List with image 
-+limg__
-=heading__
-Item 1__
-Item 2__
-
++limg<br/>
+=heading<br/>
+Item 1<br/>
+Item 2<br/>
 -img/picutre.blah
 
 ### Full size image
-+imag__
-=heading__
++imag<br/>
+=heading<br/>
 -img/picutre.blah
 
 ## Hidden description, shows up in content browser
-+description__
-A description of the page__
++description<br/>
+A description of the page<br/>
 which is hidden 
