@@ -1,0 +1,217 @@
++title
+=Computer Terminology
+
++description
+Why terminology is important, and a few principle definitions
+
++list
+=
+Create a \link{http://www.probabilitycourse.com/chapter4/4_2_3_normal.php Normal Distribution} with your iClickers
+A
+B
+C
+D
+E
+
++list
+=Outline
+Why knowing the terminology is important
+Some principle definitions
+
++list
+=IT Terminology
+Communicating ideas
+Reading and synthesizing technical documents
+Frequently appear during a job interview
+It is important to know them well - be able to explain them, even under pressure
+Any position in the IT field requires you to know the terminology
+
++list
+=Why Numerous Terms Exist
+\link{https://en.wikipedia.org/wiki/List_of_computing_and_IT_abbreviations Wikipedia List_of_computing_and_IT_abbreviations}
+Computers are complex systems made from many different types of subsystems
+These systems communicate using a large variety of protocols
+Technology is constantly being updated and new specifications are added, while some are deprecated.
+
++limg
+=Computer
+?A person who makes calculations with an adding machine?
+An electronic device for storing and processing data, typically in binary form, according to instructions given to it in a variable program.
+-https://upload.wikimedia.org/wikipedia/commons/d/d1/Information_processing_system_%28english%29.PNG
+
++list
+=Hardware
+The collection of physical elements making up a computer system
+The physical parts or components of a computer, such as the monitor, mouse, keyboard, computer data storage, hard disk drive (HDD), graphic cards, sound cards, memory, motherboard
+
++list
+=Software 
+Computer software is any set of instructions that directs a computer to perform specific operations 
+Software consists of computer programs, libraries and related non-executable data (such as online documentation or digital media).
+
++list
+=Monitor
+Typically, a screen that displays peripheral output to the user in the form of graphical information.
+What about sound? Well, that is output through a monitor also.
+A generalization is that a monitor is any peripheral output device in the service of computer and human interaction. 
+
++limg
+=LCD
+A liquid-crystal display (LCD) is a electronic visual display, typically flat panel, that uses the light modulating properties of liquid crystals.
+An LCD display is made from liquid crystals, transparent electrodes, tiny transistors.
+-https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/LCD_layers.svg/500px-LCD_layers.svg.png
+
++limg
+=Pixel
+Pixel is used to refer to a single scalar element of a multi-component representation.
+A physical point in a raster image, or the smallest addressable element in an all points addressable device.
+Each pixel is a sample of an original image 
+The address of a pixel corresponds to its physical coordinates.
+-images/pixelGrid.png
+
++limg
+=Bitmapped
+A bitmap image representation, consisting of rows and columns of dots
+The value of each dot is stored in one or more bits of data 
+A computer translates the bit map into pixels
+-http://www.jeffreythompson.org/blog/wp-content/uploads/2011/05/SuperLowResSouthPark.png
+
++list
+=Processor
+A processor accepts digital data as input, performs the basic arithmetic, logical, control and input/output (I/O) operations according to instructions stored in a program.
+A central processing unit (CPU) is the electronic circuitry making up the processor within a computer
+A CPU consists of Memory Unit (RAM), Control Unit (coordination), Arithmetic Logic Unit (logic and calculations)
+A microprocessor (MCU) is a multipurpose, programmable device that incorporates the functions of a computer's central processing unit (CPU) on a single integrated circuit (IC)
+
++list
+=Primary computer memory
+integrated circuit consisting of silicon-based transistors
+stores data and instructions being worked on
+data is lost when power is off
+e.g. RAM, SRAM
+
++list
+=Secondary computer memory
+flash memory
+non-volatile
+data is permanently stored even if power is switched off.
+slower than primary memory
+CPU does not directly access it, transferred to main first
+e.g. flash drive, CD, ROM, PROM, EPROM
+
++limg
+=Computer storage
+hard disk drive (HDD)
+Used to store information
+e.g. magnetic disk, SSD
+-https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/MagneticMedia.svg/500px-MagneticMedia.svg.png
+
++list
+=Cache
+Stores data so future requests for that data can be served faster
+Web caches to store previous responses (data) from web servers,
+CPU cache is used by the CPU to reduce the average time to access data from the main memory
+Data stored in a cache might be the result of an earlier computation, or the duplicate of data stored elsewhere.
+
++limg
+=Random vs. Sequential access
+Random access - An item of data is accessed by an address among a population of addressable elements 
+Each element can be accessed as easily and efficiently as any other.
+Data can be stored in one or more dimensions (row, row/column, n-dimensional data model).
+Sequential access -  A group of elements (such as data in a register, a file, magnetic tape) is accessed in a predetermined, ordered sequence 
+Sometimes the only way of accessing the data, tape for example
+It may be desirable to process a sequence of data elements in order (serial protocols)
+-https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Random_vs_sequential_access.svg/500px-Random_vs_sequential_access.svg.png
+
++limg
+=Motherboard
+The main printed circuit board (PCB) in a computer system
+Expansion capacity
+Allows communication between subsystems
+-https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Acer_E360_Socket_939_motherboard_by_Foxconn.svg/500px-Acer_E360_Socket_939_motherboard_by_Foxconn.svg.png
+
++list
+=Bus
+The communication system used for transferring data between components 
+Busses can be either parallel, or serial
+Internal, or Front Side, Bus connects internal components
+e.g.PCI, SATA, 12C
+External bus connects peripheral devices
+e.g. USB, Firewire
+
++list
+=Algorithm
+A self-contained step-by-step set of operations (instructions) to be performed
+An algorithm is an effective method that can be expressed within a finite amount of space and time
+Initial state - instructions - end state
+Algorithms can be either deterministic, or stochastic (probabilistic)
+
++limg
+=Is this an algorithm?
+A. Yes
+B. No
+-http://cdnstatic.visualizeus.com/thumbs/d2/7d/instruction,toy,vintage-d27dd6a14c52806315afdd705ded8f1f_h.jpg
+
++limg
+=Program
+A computer program is a collection of instructions that performs a specific task when executed by a computer
+Control the behaviour of a computers input, process, and output
+-https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/GIMP_2.8_running_on_Ubuntu_12.04.png/640px-GIMP_2.8_running_on_Ubuntu_12.04.png
+
++list
+=Language 
+A programming language is designed to communicate instructions to a computer
+Levels of abstraction - binary - assembler - c - (object oriented, scripting etc.), user applications
+<small>Input: Gather data from the keyboard, a file, or some other device.
+Output: Display data on the screen or send data to a file or other device.
+Arithmetic: Perform basic arithmetical operations like addition and multiplication.
+Conditional Execution: Check for certain conditions and execute the appropriate sequence of statements.
+Repetition: Perform some action repeatedly, usually with some variation.
+Allen Downey, How To Think Like A Computer Scientist</small>
+Imperative programming languages you specify the stepson what you want to happen (C, Java)
+Declarative programs languages leave the control flow to the program, and you rather describe what you want (SQL, Prolog)
+
++list
+=Computer Programming
+A process of formulating a computing problem and creating a computer program written in one or more programming languages
+Types of activities associated with computer programming:
+analysis of problems, creating algorithms, algorithm evaluation, resource acquisition, implementation (generatingg source code), debugging
+
++list
+==The 5 steps of programming
+Requirements
+Design
+Implementation
+Verification
+Maintenance
+
++list
+==Abstraction, Generalization, Analytical thinking
+\b{Abstraction} is a technique for managing complexity of computer systems, working at higher levels of the system, rather than the more complex details below the current level. It captures the most important aspects of a concept and ignores unimportant details. e.g. how does a user enter a number
+\b{Generalization} is applying/designing an idea or program to increasingly wider range of users, or applications. Broadly useful instead of application specific e.g. Word vs WYSIWYG.
+\b{Analytical Thinking} - (algorithmic thinking)  involves gathering relevant information and applying a step-by-step approach for breaking down complex problems into single and manageable components to arrive at appropriate solutions
+
++limg
+=Menu/pop-up menu
+A menu or menu bar is graphical control element that lists options or commands
+A pop-up menu is a menu in a graphical user interface (GUI) appearing on some user interaction, such as a mouse roll over or right-click. 
+A pop-up menu offers a limited set of choices that are available in the current state of the application and is sometimes called the context-menu
+-images/popMenu.png
+
++list
+=An expert user. 
+Expert users have been around something (software) long enough to be able to look at something and quickly figure it out
+Have strong domain knowledge.
+
++limg
+=Designers making software easier to use
+\b{Wireframing} depicts the page layout or arrangement of the website’s content, including interface elements and navigational systems, and how they work together. \small{Garrett, Jesse James (2010), The Elements of User Experience: User-Centered Design for the Web and Beyond}
+A \b{usability study} is used to ascertain how users operate a software under a measurable set of conditions with the aim of identifying problems needing to be addressed
+-https://upload.wikimedia.org/wikipedia/commons/4/47/Profilewireframe.png
+
++list
+=Next lesson
+Network and Internet
+Terminology
+Protocols
+How the Internet works

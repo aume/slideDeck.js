@@ -1,0 +1,239 @@
+
+
+/*
+* this section is the slide styling
+*
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	font-weight: 100;
+	color:white;
+}
+
+a:link {
+		color:pink;
+}
+
+a:visited {
+		color:pink;
+}
+
+
+.content-menu-item {
+	/*background-color:#FFF;*/
+	color:#FFF;
+	width: 200px;
+	height:100px;
+	margin-top:0px;
+	padding:5px;
+	border: 1px solid gray;
+	float: left;
+	text-align: center;
+	-webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+.content-menu-item p{ 
+	text-align: left;
+	color:#FFF;
+	font-size: 0.75em;
+}
+
+.content-menu-item:hover {
+	background-color:#EE8393;
+	color:#000;
+	-webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+pre {
+	line-height: 1.5;
+	font-size: 24px;
+	color: pink  ;
+}
+
+
+.slide-box {
+	width:100%;
+	margin-left:auto;
+	margin-top:0px;
+	padding:20px;
+	/*background-color:#FFF;*/
+	height: 95vh;
+	min-height:480px;
+	overflow-y:auto;
+	font:  30px sans-serif ;
+	font-weight: lighter;
+    line-height: 1.5;
+	-webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+	
+}
+
+
+.slide-box-print {
+	width:7.8cm;
+	height: 7.5cm;
+    float:left;
+    margin:0.125cm;
+	font:  10px sans-serif ;
+	font-weight: lighter;	
+    border-style: solid;
+    border-color: black;
+	-webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.slide-box-print pre{
+	line-height: 1.25;
+	font-size: 10px;
+	color: red  ;	
+}
+
+.slide-box-print .textareaCode {
+    font-size:8px;
+}
+
+.slide-box ul{
+	list-style: square ;
+	padding-left:0;
+	margin-left: 0; 
+	list-style-position:outside;
+
+}.slide-box ul ul{
+	margin-left: 10px;
+	list-style: circle;
+	font-size: 80%;
+	color: Khaki ;
+}.slide-box em {
+	color: magenta;
+} 
+
+.slide-box h2 {
+	font-size:2em;
+} 
+.slide-box td {padding-left:3px;}
+.slide-box tr:nth-child(even) {background: #CCC}
+.slide-box tr:nth-child(odd) {background: #FFF}
+	
+
+.slide-title {
+	width:100%;
+	margin-top:15%;
+	/*background-color:#FFF;*/
+	
+}.slide-title  ul{
+	list-style: none;
+	list-style-position:outside;
+	padding-left: 0;
+}
+
+/* For those slides with lists, and lists with img*/
+
+.slide-list {
+	width:90%;
+	height:70%;
+	margin:auto;
+}
+
+/*redundant*/
+.slide-list-image {
+	width:50%;
+	margin-left: 0px;
+	float: left;
+}
+/* end redundant*/
+
+
+.slide-limg {
+	width:50%;
+	margin-left: 0px;
+	float: left;
+}
+
+.slide-image {
+	width: 50%; 
+	float:right;
+	text-align: center;
+}
+
+
+.slide-image img {
+    max-width: 80%;
+    max-height: 50%;
+}
+
+.slide-image-wide {
+	width: 50%;
+	float:right;
+}
+
+/**/
+.default-image {
+	width: 100%; 
+	float:right;
+}
+
+.default-image img{
+    max-width: 40%;
+    max-height: 40%;
+    float:right;
+}
+
+/**/
+.slide-only-image {
+	width: 90%;
+}
+.slide-image-only {
+	max-width: 70%;
+    max-height: 70%;
+}
+
+
+/* For those slides with code examples */
+
+.slide-codebox {
+	width:95%;
+	background:#AAA;
+	height:80%;
+}
+.textareaCode {
+	width:48%;
+	height:98%;
+	padding:3px;
+	resize: none;
+	font:16px consolas,"courier new",monospace;
+}
+.iframewrapper {
+	width:48%;
+	height:98%;
+	float:right;
+	background-color:#EEE;
+	
+}
+.iframeResult {
+	width:94%;
+	height:100%;
+	padding:3px;
+	background-color:#EEE;
+}
+
+.numbering{
+	font-size:12px;
+    float:right; 
+    right: 0; 
+    bottom: 0;
+}
+
+
+.slide-footer {
+	width:100% ;
+	clear:both; /* Using clear moves the div down below the floated */
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+

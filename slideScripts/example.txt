@@ -1,0 +1,213 @@
++title
+=slideDeck.js: 
+A Platform for Generating Accessible 
+and Interactive Web-Based Course Content
+
+
++limg
+==Context
+Lecture Slides
+	Creating
+	Disseminating
+	Updating
+-img/powerPoint.png
+
++list
+=Slide Deck Lifecycle 
+Research
+Synthesizing information
+Creating or sourcing assets
+Crafting and refining slides
+Slide maintenance 
+
++limg
+=Existing Systems
+Powerpoint
+WYSWIG
+	\link{https://slides.com/ Reveal.js}
+	Google Slides
+Beamer (Tex)
+\link{https://github.com/imakewebthings/deck.js/blob/master/boilerplate.html Deck.js}
+-https://upload.wikimedia.org/wikipedia/commons/b/b9/Beamer01.png
+
+
++imag
+=Presenting
+\link{http://snap.berkeley.edu/snapsource/snap.html snap}
+-img/snapPres.jpg
+
+
++limg
+=Disseminating
+PDF
+Blackboard
+Course website
+\link{http://www.rubycolor.org/takahashi/takahashi/img0.html Web page}
+-img/website.png
+
+
++limg
+==Motivations
+	Platform dependence 
+	File size (downloading)
+	Lack of interactive exercises
+	Application switching during presentation
+	Repetitive and time-consuming process
+-img/triangles.png
+
++list
+=Design Problem
+	Web accesible
+	Platform agnostic
+	Familiar slide interface
+	Interactive exercises
+	Simple/quick content entry
+	Simple slide design
+	Maintainable
+
+
++limg
+==slideDeck.js
+Addresses:
+	creating slides 
+	accessibility
+	blended learning
+	presenting coding exercises
+	challenges of building web-based content	
+System
+	markup language
+	macro processor
+	css slide styling
+	javascript behaviour engine
+-img/slideDeckOutline.png
+
+
++limg
+=Slide Types
+List
+List with Image
+Image
+Code Editor
+-img/slides.png
+
++list
+=List
+Multi-level list
+{
+ +list
+ =List
+ Item 1
+ 	item 1.1
+		item 1.1.1
+		item 1.1.2
+ 	item 1.2
+ Item 2
+ Item 3
+}
+
+
++limg
+=List with image
+Multi-level list with image
+{
+ +limg
+ =List with Image
+ Item 1
+ 	item 1.1
+ Item 2
+ -img/hexa.png
+}
+-img/hexa.png
+
++imag
+=Image
+{
+ +imag
+ =Image
+ -img/hexa.png
+}
+-img/hexa.png
+
+
++codebox
+=HTML/JS/CSS Code editor
+ <!--
+ +codebox
+ =Code editor
+ --!>
+
+<html>
+<body>
+
+<div style="background-color:magenta; color:white; height:200px;width:200px; margin-left:25%"  onclick="alert('Event box')">Somethings inside the box.</div>
+
+</body>
+</html>
+
+
++list
+=Hyperlinks
+Escape character backslash \ with link command
+First parameter: URL
+Second parameter: anchor text 
+{
+ The \link{http://cs.tru.ca/wccce2016/ WCCCE 2016} confernece
+}
+The \link{http://cs.tru.ca/wccce2016/ WCCCE 2016} confernece
+
++list
+=HTML tags
+HTML tags have been given a \em{shorthand} input
+Escape character backslash \mark{\} with \strong{HTML tag}
+Parameter is enclosed text.
+{
+Stylistic changes such as \strong{strong}, \var{var}, \small{small}, 
+\sup{sup}, \sub{sub}, \mark{mark}
+}
+
+Stylistic changes such as \strong{strong}, \var{var}, \small{small}, \em{em}, \sup{sup}, \sub{sub}, \mark{mark}
+
++limg
+=Content Browser
+\link{https://people.ok.ubc.ca/mthorogo/courses/cosc122/content.php Navigation for the class lessons}
+Includes name of lesson
+Short description added in slideDeck markup
+{
+ +description
+ =Encoding and representing numbers, information systems
+}
+Javascript engine \i{scrapes} from list of files.
+List of files is simple text file of slide deck
+-img/content.png
+
+
+
++list
+==Implementation
+slideDeck.js has been used in a classroom setting
+1\sup{st} computer science course \small{(50 students, 19 lectures)} 
+2\sup{nd} year digital arts course \small{(12 students, 13 lectures)}
+Students accessed slides on \em{desktop} and \em{mobile devices} \small{(responsive design)}
+Some students printed slides \small{(print functionality)}
+Students regularly used the \em{HTML code editor} for exercises
+\a{Hyperlinks} extended lecture material
+
+
++list
+=Conclusion
+	Accessible for students
+	Interactive coding exercises
+	Simple slides maintenance 
+	Crafting slides reduced to making lists
+	Time savings compared to making the equivalent HTML
+	Dissemination and presentation is the same technology
+
+
++list
+=Future Work
+Implement: 
+	\link{http://www.w3.org/Math/ MathML}
+	Automatic schematic editor
+
+Web App for authoring and slide design
+User evaluation - students and teachers
