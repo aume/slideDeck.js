@@ -15,29 +15,45 @@ Creating, disseminating, and maintaining lecture slides has long been the standa
 
 ###Title 
 +title
+
 =heading
 
 ### List 
 +list
+
+= heading
+
 Item 1
+    Item 1.1
 Item 2
 
 ### HTML editor 
 +codebox
-<html>
-</html>
+
+=heading
+
+demo code
 
 ### List with image 
 +limg
+
+=heading
+
 Item 1
+
 Item 2
+
 -img/picutre.blah
 
 ### Full size image
 +imag
+
+=heading
+
 -img/picutre.blah
 
 ## Hidden description, shows up in content browser
 +description
+
 A description of the page
 which is hidden 
