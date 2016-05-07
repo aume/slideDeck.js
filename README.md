@@ -19,9 +19,9 @@ Creating, disseminating, and maintaining lecture slides has long been the standa
 =heading
 
 ### List 
-+list__
-=heading__
-Item 1__
++list
+=heading
+Item 1
     Item 1.1__
 Item 2
 
