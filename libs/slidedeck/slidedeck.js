@@ -1,9 +1,10 @@
 /*
- JavaScript Document
- miles.thorogood@ubc.ca
- 2016
- the main guts of slidedeck.js development
- Some documentation is to be added
+* slideDeck.js
+* JavaScript Document
+* miles.thorogood@ubc.ca
+* 2016
+* the main guts of slidedeck.js development
+* Some documentation is to be added
 */
 
 window.onload = function() {
@@ -364,7 +365,7 @@ function processSlideDeck(deck){
         fSlide = '\t<div class="slide-'+slide['type']+'">\n';
         fSlide += '\t\t<hgroup>\n';
         fSlide += '\t\t\t<h1>' + slide['heading']+'</h1>\n';
-        fSlide += '\t\t\t<h3>miles.thorogood@ubc.ca</h3>\n';
+        fSlide += '\t\t\t<h3></h3>\n'; // could be for email
         fSlide += processItems(slide['items']) +'</small>';
         fSlide += '\t\t</hgroup>\n';
         fSlide += '<small> print:<input type="checkbox" id="print" onclick="switchSlideBoxStyle()">'
