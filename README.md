@@ -35,7 +35,9 @@ slideScripts -> ... slideDeck markup txt files, refenced in content.txt
 +list<br/>
 =heading<br/>
 Item 1<br />
-?ts=4  Item 1.1<br />
+&nbsp;Item 1.1<br />
+&nbsp;&nbsp;Item 1.1.1<br />
+&nbsp;&nbsp;Item 1.1.2<br />
 Item 2
 
 ### HTML editor 
