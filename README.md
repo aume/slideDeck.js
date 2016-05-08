@@ -4,15 +4,15 @@ Creating, disseminating, and maintaining lecture slides has long been the standa
 ---
 ## Project directory structure
 
-content.html - content browser. This is the index for the course slide decks.
-content.txt - a new line seperated list of the slide decks to display. Just file name, no extension
-slide-file.html - This is the slideDeck html boiler plate. slide deck is put inside the content div
-
-css -> menu.css - Styling for the main nav menu
-css -> style.css - Styling for basic elements (could be moved into libs)
-img -> ... the relative image directory used in the example
-libs -> slidedeck -> slidedeck.css - styling for the slide types
-libs -> slidedeck -> slidedeck.js - macroprocessor and slide behaviour
+content.html - content browser. This is the index for the course slide decks.<br/>
+content.txt - a new line seperated list of the slide decks to display. Just file name, no extension.<br/>
+slide-file.html - This is the slideDeck html boiler plate. slide deck is put inside the content div<br/>
+<br/>
+css -> menu.css - Styling for the main nav menu<br/>
+css -> style.css - Styling for basic elements (could be moved into libs)<br/>
+img -> ... the relative image directory used in the example<br/>
+libs -> slidedeck -> slidedeck.css - styling for the slide types<br/>
+libs -> slidedeck -> slidedeck.js - macroprocessor and slide behaviour<br/>
 slideScripts -> ... slideDeck markup txt files, refenced in content.txt
 
 ---
