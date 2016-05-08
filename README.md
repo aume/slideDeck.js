@@ -30,6 +30,7 @@ slideScripts -> ... slideDeck markup txt files, refenced in content.txt
 ###Title 
 +title<br/>
 =heading
+![alt tag](https://github.com/aume/slideDeck.js/tree/master/img/sdTitle.png)
 
 ### List 
 +list<br/>
@@ -39,11 +40,13 @@ Item 1<br />
 &nbsp;&nbsp;Item 1.1.1<br />
 &nbsp;&nbsp;Item 1.1.2<br />
 Item 2
+![alt tag](https://github.com/aume/slideDeck.js/tree/master/img/sdList.png)
 
 ### HTML editor 
 +codebox<br/>
 =heading<br/>
 demo code
+![alt tag](https://github.com/aume/slideDeck.js/tree/master/img/sdCode.png)
 
 ### List with image 
 +limg<br/>
@@ -51,13 +54,39 @@ demo code
 Item 1<br/>
 Item 2<br/>
 -img/picutre.blah
+![alt tag](https://github.com/aume/slideDeck.js/tree/master/img/sdLIMG.png)
+
 
 ### Full size image
 +imag<br/>
 =heading<br/>
 -img/picutre.blah
 
-## Hidden description, shows up in content browser
+### Hidden description, shows up in content browser
 +description<br/>
 A description of the page<br/>
 which is hidden 
+
+
+
+## Other slidedech features
+
+### Overview slide
+Using a double assignment operator == puts a hyperlink to a slide in an overview slide.
+Such that:
+![alt tag](https://github.com/aume/slideDeck.js/tree/master/img/sdOverview.png)
+
+
+### Hyperlinks
+Using the command \link(URL anchor text) wrapes the anchor text in an a href with src=URL
+ ![alt tag](https://github.com/aume/slideDeck.js/tree/master/img/sdLink.png)
+ 
+### Tags
+To wrap text in an HTML tag use the syntax: \tag{text to wrap}, where tag is a HTML tag like em strong etc.
+![alt tag](https://github.com/aume/slideDeck.js/tree/master/img/sdTags.png)
+
+ 
+
+ 
+
+
