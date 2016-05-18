@@ -7,6 +7,8 @@
 * Some documentation is to be added
 */
 
+"use strict";
+
 window.onload = function() {
     readDeck();
     // processDeck(); which generaerate the behaviour is called at line 289, 
@@ -346,7 +348,7 @@ function processSlideDeck(deck){
 
     // function create hyperlink content overvie slide
     function generateOverview(pageLinks) {
-        fSlide = '\n';
+        var fSlide = '\n';
         fSlide += '<!-- begin .slide-box Overview -->\n' ;
         fSlide += '<a name="overview"></a> \n' ;
         fSlide += '<section class="slide-box">\n';
@@ -362,6 +364,7 @@ function processSlideDeck(deck){
        
      // special case for processing title slide
     function processTitle(slide) {
+        var fSlide = '\n';
         fSlide = '\t<div class="slide-'+slide['type']+'">\n';
         fSlide += '\t\t<hgroup>\n';
         fSlide += '\t\t\t<h1>' + slide['heading']+'</h1>\n';
@@ -375,7 +378,7 @@ function processSlideDeck(deck){
     }
     // special case for processing code
     function processCode(content) {      
-        slide = '\n'              
+        var slide = '\n'              
         slide += '\t<textarea  class="textareaCode" onfocus="selectEdit(this.id)" onBlur="deselectEdit(this.id)">'
         for(let line of content)
             slide += line.replace('<', '&lt;').replace('>', '&gt;') +'\n'
@@ -476,9 +479,9 @@ function processSlideDeck(deck){
         (.+?) matches and captures anything up to }
         \} matches }
         */
-        str = str.replace(/\\(.+?)\{(.+?)\}/g, function(m, tag, content) {
+        var clean_str = str.replace(/\\(.+?)\{(.+?)\}/g, function(m, tag, content) {
             if(tag==='link') {
-                contents = content.split(/\s/);
+                var contents = content.split(/\s/);
                 if(contents.length==1) contents[1] = contents[0]
                 return '<a href="' + contents[0]+ '" target="_blank">' + contents.slice(1).join(' ') + '</a>';
             }
@@ -487,7 +490,7 @@ function processSlideDeck(deck){
             }
             return '<'+tag+'>' + content + '</'+tag+'>';
         });
-        return str;
+        return clean_str;
     }
     };
     
