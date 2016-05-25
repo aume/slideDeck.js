@@ -50,7 +50,7 @@ function processDeck() {
 	// go through all codeboxes give each codeedit and resultframe uids
 	codeBoxes = document.getElementsByClassName("textareaCode");
 	for(var i=0;i<codeBoxes.length;i++) {
-		uid = guid() ;
+		var uid = guid() ;
 		codeBoxes[i].setAttribute("id", uid);
 		codeBoxes[i].nextSibling.nextSibling.setAttribute("id", "result"+uid);
         // var editor = CodeMirror.fromTextArea(document.getElementById(uid), {
