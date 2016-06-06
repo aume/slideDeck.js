@@ -487,6 +487,8 @@ function processSlideDeck(deck){
             }
             else if(tag==='image') {
                 return '\t<div class="default-image">' + '\t\t<img src="'+content+'">\n' + '\t</div>\n'
+            } else if(tag==='tube') {
+                return '\t<iframe width="560" height="315" src="'+content+'" frameborder="0" allowfullscreen></iframe>'
             }
             return '<'+tag+'>' + content + '</'+tag+'>';
         });
