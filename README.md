@@ -4,12 +4,10 @@ Creating, disseminating, and maintaining lecture slides has long been the standa
 ---
 ## Project directory structure
 
-content.html - content browser. This is the index for the course slide decks.<br/>
+index.html - content browser. This is the index for the course slide decks listed in content.txt<br/>
 content.txt - a new line seperated list of the slide decks to display. Just file name, no extension.<br/>
 slide-file.html - This is the slideDeck html boiler plate. slide deck is put inside the content div<br/>
 <br/>
-css -> menu.css - Styling for the main nav menu<br/>
-css -> style.css - Styling for basic elements (could be moved into libs)<br/>
 img -> ... the relative image directory used in the example<br/>
 libs -> slidedeck -> slidedeck.css - styling for the slide types<br/>
 libs -> slidedeck -> slidedeck.js - macroprocessor and slide behaviour<br/>
@@ -35,6 +33,7 @@ slideScripts -> ... slideDeck markup txt files, refenced in content.txt
 ### List 
 +list<br/>
 =heading<br/>
+A basic list. tabbing nests lists
 Item 1<br />
 &nbsp;Item 1.1<br />
 &nbsp;&nbsp;Item 1.1.1<br />
@@ -42,11 +41,6 @@ Item 1<br />
 Item 2
 ![alt tag](https://raw.githubusercontent.com/aume/slideDeck.js/master/img/sdList.png)
 
-### HTML editor 
-+codebox<br/>
-=heading<br/>
-demo code
-![alt tag](https://raw.githubusercontent.com/aume/slideDeck.js/master/img/sdCode.png)
 
 ### List with image 
 +limg<br/>
@@ -68,6 +62,12 @@ A description of the page<br/>
 which is hidden 
 
 
+### HTML editor 
++codebox<br/>
+=heading<br/>
+demo code
+![alt tag](https://raw.githubusercontent.com/aume/slideDeck.js/master/img/sdCode.png)
+
 
 ## Other slidedech features
 
@@ -85,6 +85,11 @@ Using the command \link(URL anchor text) wrapes the anchor text in an a href wit
 To wrap text in an HTML tag use the syntax: \tag{text to wrap}, where tag is a HTML tag like em strong etc.
 ![alt tag](https://raw.githubusercontent.com/aume/slideDeck.js/master/img/sdTags.png)
 
+
+### Video
+Insert a you tube or vimeo player into the slide. The path to the player for Vimeo, or embedd must be used. e.g.
+\tube{https://player.vimeo.com/video/166694596}
+\tube{https://www.youtube.com/embed/6aZbJS6LZbs}
  
 
  

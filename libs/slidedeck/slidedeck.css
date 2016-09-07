@@ -7,26 +7,64 @@
 *
 */
 
+body {
+	font:  16px sans-serif;		
+	font-weight: 100;
+    line-height: 1.5;
+	background-color: white;
+	margin: 0;
+	padding: 0;
+	color: #FFF;
+}
+header {
+    padding:2em;
+    width:100%;
+    background-image: url(../../img/DSC00451.JPG);
+}
+
+#container {
+	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	/*background-color: #FFF;*/
+	margin-left: auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	margin-right: auto;
+    border-right:thin #AAA;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    #container {
+        min-width: 80px;
+    	width: 90%;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+    }
+}
+
+#content {
+	padding: 10px 0;
+	clear:both;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0px;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
 	padding-right: 15px;
 	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
 	font-weight: 100;
-	color:white;
+	color:black;
 }
 
 a:link {
-		color:pink;
+		color:red;
+        text-decoration::none;
 }
 
 a:visited {
-		color:pink;
+		color:red;
 }
 
+/* Content Menu*/
 
 .content-menu-item {
 	/*background-color:#FFF;*/
-	color:#FFF;
+	color:gray  ;
 	width: 200px;
 	height:100px;
 	margin-top:0px;
@@ -39,7 +77,6 @@ a:visited {
 }
 .content-menu-item p{ 
 	text-align: left;
-	color:#FFF;
 	font-size: 0.75em;
 }
 
@@ -57,7 +94,53 @@ pre {
 }
 
 
+
+
+h1, h2, h3, h4, h5, h6 {
+	color:gray;
+}
+
+/* The main slide bix section*/
+
+
 .slide-box {
+	width:100%;
+    float:left;
+    padding:1em;
+	font:  1em sans-serif ;
+    color:black;
+	font-weight: lighter;	
+    background-color: white ;
+    border-left: 6px solid red;
+	-webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+    box-shadow: 10px 10px 5px #888888;
+}.slide-box a{
+    color:red;
+    text-decoration:none;
+}.slide-box ul{
+	list-style: square ;
+	padding-left:2em;
+	margin-left: 0; 
+	list-style-position:outside;
+
+}.slide-box ul ul{
+
+	list-style: circle;
+	font-size: 90%;
+	color: orange ;
+}.slide-box em {
+	color: magenta;
+} 
+
+.slide-box td {padding-left:3px;}
+.slide-box tr:nth-child(even) {background: #CCC}
+.slide-box tr:nth-child(odd) {background: #FFF}
+	
+
+
+/*Flip to this when presentation mode*/
+.slide-box-present {
 	width:100%;
 	margin-left:auto;
 	margin-top:0px;
@@ -69,43 +152,20 @@ pre {
 	font:  30px sans-serif ;
 	font-weight: lighter;
     line-height: 1.5;
-	-webkit-transition-duration: 0.2s; /* Safari */
-    transition-duration: 0.2s;
-	
-}
-
-
-.slide-box-print {
-	width:7.8cm;
-	height: 7.5cm;
-    float:left;
-    margin:0.125cm;
-	font:  10px sans-serif ;
-	font-weight: lighter;	
-    border-style: solid;
-    border-color: black;
-	-webkit-transition-duration: 0.2s; /* Safari */
-    transition-duration: 0.2s;
-}
-
-.slide-box-print pre{
-	line-height: 1.25;
-	font-size: 10px;
-	color: red  ;	
-}
-
-.slide-box-print .textareaCode {
-    font-size:8px;
-}
-
-.slide-box ul{
+    background-color: #333;
+    border-left: 6px solid red;
+	-webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;	
+}.slide-box-present a:link{
+    color:pink;
+}.slide-box-present a:visited{
+    color:pink;
+}.slide-box-present ul{
 	list-style: square ;
-	padding-left:0;
+	padding-left:2em;
 	margin-left: 0; 
 	list-style-position:outside;
-
-}.slide-box ul ul{
-	margin-left: 10px;
+}.slide-box-present ul ul{
 	list-style: circle;
 	font-size: 80%;
 	color: Khaki ;
@@ -113,17 +173,15 @@ pre {
 	color: magenta;
 } 
 
-.slide-box h2 {
-	font-size:2em;
-} 
-.slide-box td {padding-left:3px;}
-.slide-box tr:nth-child(even) {background: #CCC}
-.slide-box tr:nth-child(odd) {background: #FFF}
-	
+
+
+
+/* Particular slide types*/
 
 .slide-title {
-	width:100%;
-	margin-top:15%;
+	width:80%;
+	margin-top:2em;
+    padding:1em;
 	/*background-color:#FFF;*/
 	
 }.slide-title  ul{
@@ -181,8 +239,19 @@ pre {
 .default-image img{
     max-width: 40%;
     max-height: 40%;
-    float:right;
+    background:white;
+    
 }
+.small-image img{
+    width: 10%;
+    background:white;
+}
+.large-image img{
+    width: 40%;
+    background:white;
+    
+}
+
 
 /**/
 .slide-only-image {
@@ -224,11 +293,76 @@ pre {
 
 .numbering{
 	font-size:12px;
+    margin-right:1em;
     float:right; 
     right: 0; 
     bottom: 0;
 }
 
+
+
+
+
+/* Navigation*/
+
+nav ul {
+	list-style:none;
+	position:relative;
+	float:left;
+	margin:0;
+	padding:0;
+	z-index:12;
+}
+nav ul li {
+	position: relative;
+	float: left;
+}
+
+nav li ul {
+	display: none;
+}
+
+nav ul li a {
+	display: block;
+	/*background: #FFF;*/
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	font-size: 24px ;
+    white-space: nowrap;
+	/*color: #DDD;*/
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+nav ul li a:hover {
+	color:#EE8393;
+}
+nav a:link {
+color: gray;
+}
+nav a:visited {
+
+}
+
+nav li:hover ul {
+	display: block; 
+	position: absolute;
+}
+nav li:hover li {
+	float: none;
+}
+nav li:hover a {
+}
+nav li:hover li a:hover {
+	/*background: #EEE;*/
+}
+nav li ul li {
+	border-top: 0px;
+}
+
+/*Footer*/
 
 .slide-footer {
 	width:100% ;
@@ -237,5 +371,24 @@ pre {
     padding-right: 10px;
     display: inline-block;
 }
+
+footer {
+	width:100% ;
+	clear:both; /* Using clear moves the div down below the floated */
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+	float:left;
+}
+
+footer #logo {
+    padding-left: 10px;
+    padding-right: 140px;
+    display: inline-block;
+}
+footer #logo img {
+	height:50px ;
+}
+
 
 

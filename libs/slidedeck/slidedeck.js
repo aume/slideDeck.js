@@ -80,18 +80,20 @@ function switchSlideBoxStyle() {
     var footer = document.getElementsByTagName("footer")[0];
 
     if(printIt==true) {
-        header.style.display = "none";
+        //header.style.display = "none";
         footer.style.display = "none";
         var boxes = document.getElementsByClassName("slide-box");
         for(var i=boxes.length-1; i>=0 ;i--) 
-            boxes[i].setAttribute("class", "slide-box-print") ;
+            boxes[i].setAttribute("class", "slide-box-present") ;
+        slideBoxes = document.getElementsByClassName("slide-box-present"); 
         
     } else {
         header.style.display = "block";
         footer.style.display = "block";
-        var boxes = document.getElementsByClassName("slide-box-print");
+        var boxes = document.getElementsByClassName("slide-box-present");
         for(var i=boxes.length-1; i>=0 ;i--) 
             boxes[i].setAttribute("class", "slide-box") ;
+        slideBoxes = document.getElementsByClassName("slide-box"); 
     }
       
 }
@@ -271,7 +273,7 @@ function processSlideDeck(deck){
     var count = 0 ;
     var mainBody = '' ;
     // populate an array of dictionaries for the slides
-    for(let line of deck) {
+    for(var line of deck) {
         // a new slide
         if(line[0]=='+') {
             if(line.slice(1)==='description') continue;
@@ -293,7 +295,7 @@ function processSlideDeck(deck){
 
     count = 0;
     // process all slides and write out to body of document
-    for(let slide of slides) {
+    for(var slide of slides) {
         // insert the overview if at slide 2 (hackish)
         if(count++ ==1)mainBody+=generateOverview(overview)
         // just keep adding slides
@@ -355,7 +357,7 @@ function processSlideDeck(deck){
         fSlide += '\t<h2>Overview</h2>\n';
         fSlide += '\t<div class="slide-list">\n';
         fSlide += '\t\t<ul>\n' ;
-        for(let item of pageLinks) fSlide += '\t\t\t<li><a href="#'+item+'">'+item+'</a></li>'
+        for(var item of pageLinks) fSlide += '\t\t\t<li><a href="#'+item+'">'+item+'</a></li>'
         fSlide += '\t\t</ul>\n' ;
         fSlide += '\t</div><!-- end div slide-list -->\n'
         fSlide += '</section><!-- end .slide-box -->\n'
@@ -369,9 +371,9 @@ function processSlideDeck(deck){
         fSlide += '\t\t<hgroup>\n';
         fSlide += '\t\t\t<h1>' + slide['heading']+'</h1>\n';
         fSlide += '\t\t\t<h3></h3>\n'; // could be for email
-        fSlide += processItems(slide['items']) +'</small>';
+        fSlide += '<small>'+processItems(slide['items']) +'</small>';
         fSlide += '\t\t</hgroup>\n';
-        fSlide += '<small> print:<input type="checkbox" id="print" onclick="switchSlideBoxStyle()">'
+        fSlide += '<small> present:<input type="checkbox" id="print" onclick="switchSlideBoxStyle()"></small>'
         fSlide += '</div><!-- end .slide-title-->\n'
         fSlide += '</section><!-- end .slide-box -->\n'
         return fSlide
@@ -380,7 +382,7 @@ function processSlideDeck(deck){
     function processCode(content) {      
         var slide = '\n'              
         slide += '\t<textarea  class="textareaCode" onfocus="selectEdit(this.id)" onBlur="deselectEdit(this.id)">'
-        for(let line of content)
+        for(var line of content)
             slide += line.replace('<', '&lt;').replace('>', '&gt;') +'\n'
         slide += '\t</textarea>'
         slide += '\t<div class="iframewrapper"></div>'
@@ -393,7 +395,7 @@ function processSlideDeck(deck){
         var content = '\t\t<ul>\n' ;
         var codeMode = false;
         var tabsCounted = 0;
-        for(let item of items) {
+        for(var item of items) {
             if(item=='') continue;
             // first replace some special characters
             // check if code mode is activated
@@ -487,7 +489,13 @@ function processSlideDeck(deck){
             }
             else if(tag==='image') {
                 return '\t<div class="default-image">' + '\t\t<img src="'+content+'">\n' + '\t</div>\n'
-            } else if(tag==='tube') {
+            } else if(tag==='imageS') {
+                return '\t<div class="small-image">' + '\t\t<img src="'+content+'">\n' + '\t</div>\n'
+            }
+            else if(tag==='imageL') {
+                return '\t<div class="large-image">' + '\t\t<img src="'+content+'">\n' + '\t</div>\n'
+            }
+             else if(tag==='tube') {
                 return '\t<iframe width="560" height="315" src="'+content+'" frameborder="0" allowfullscreen></iframe>'
             }
             return '<'+tag+'>' + content + '</'+tag+'>';

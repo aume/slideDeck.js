@@ -7,10 +7,8 @@ Content is scrapped from the slideSctipts listed in ./content.txt
 
 <head>
     <meta charset="UTF-8">
-    <title>COSC 122</title>
+    <title>COSC 150</title>
     <link rel="icon" sizes="16x16" type="image/png" href="../../images/favicon.png"/>
-    <link href="./css/style.css" rel="stylesheet" type="text/css">
-    <link href="./css/menu.css" rel="stylesheet" type="text/css">
     <link href="./libs/slidedeck/slidedeck.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -26,9 +24,8 @@ Content is scrapped from the slideSctipts listed in ./content.txt
                 <nav>
                     <!-- Main Navigation inside <header> -->
                     <ul>
-                        <li><a href="">home</a></li>
+                        <li><a href="http://digital-media.ok.ubc.ca">home</a></li>
                         <li> <a href="content.html">content</a> </li>
-                        <li><a href="">html-editor</a></li>
                     </ul>
                 </nav>
                 <hr>
@@ -47,7 +44,7 @@ Content is scrapped from the slideSctipts listed in ./content.txt
                     // Default XMLHttpRequest behaviour pulled from https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
                     function reqListener () {
                         // get each line item
-                        for(let item of this.responseText.split('\n')) {
+                        for(var item of this.responseText.split('\n')) {
                             if(item.length>1)contentBits.push({'title':item, 'file':item+'.txt', 'text':''}) ;
                         }
                         // strip out the description
@@ -74,12 +71,12 @@ Content is scrapped from the slideSctipts listed in ./content.txt
                         //
                         if(count >=contentBits.length) {
                             var mainBody = '';
-                            for(let bit of contentBits) mainBody += bit['text'];     
+                            for(var bit of contentBits) mainBody += bit['text'];     
                             document.getElementById('content').innerHTML = mainBody;
                             
                             // need to wrap inside for loop in function
                             //http://stackoverflow.com/questions/18122023/call-addeventlistener-in-loop-with-variable
-                            for(let bit of contentBits) {
+                            for(var bit of contentBits) {
                                 (function (bit) {
                                     var id = bit['title']
                                     var x = document.getElementById(id);
