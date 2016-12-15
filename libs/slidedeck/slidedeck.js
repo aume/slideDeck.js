@@ -61,7 +61,10 @@ function processDeck() {
         //var myCodeMirror = CodeMirror.fromTextArea(codeBoxes[i]); // codemiror shortcut http://codemirror.net/doc/manual.html#fromTextArea
         //submitCode("result"+uid);
 	}
-    
+    // use prism for syntax highlighting 
+    //http://prismjs.com/
+    if(!self.Prism) return;
+    Prism.highlightAll();
 }
 
 
@@ -331,6 +334,7 @@ function processSlideDeck(deck){
         // treat codeBox as special case
         if('items' in slide) {
             if(slide['type']==='codebox') fSlide += processCode(slide['items'])
+            else if(slide['type']==='blank') fSlide += processBlank(slide['items'])
             else fSlide += processItems(slide['items']);
         }
     
@@ -389,6 +393,16 @@ function processSlideDeck(deck){
         slide += '\t</div>'
         return slide
     }
+    
+    // special case for processing blank
+    // dumps items as is
+    // use for html js code
+    function processBlank(content) {      
+        var slide = '\n'              
+        for(var line of content)
+            slide += line+'\n';
+        return slide
+    }
 
     // this function processes the main content of the slide
     function processItems(items) {
@@ -401,16 +415,17 @@ function processSlideDeck(deck){
             // check if code mode is activated
             if(item[0]=='{') {
                 codeMode=true;
-                content += '<li>\n' + '<pre>\n';
+                content += '</ul>\n<pre>';//'<li>\n' + '<pre>\n';
                 continue;
             } else if (item[0]=='}' && codeMode) {
                 codeMode=false;
-                content += '</pre>\n';
-                content += '</li>\n';
+                content += '</pre>\n<ul>';
+                //content += '</pre>\n';
+                //content += '</li>\n';
                 continue;
             }
             if(codeMode) {
-                content += escapeHtml(item)+'\n' ;
+                content += item+'\n';//escapeHtml(item)+'\n' ;
                 continue;
             }
             //
@@ -429,7 +444,7 @@ function processSlideDeck(deck){
             // and replace tabs
              //content += item.replace('&','&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('\n','').replace('\r','');
             item = escapeHtml(item)
-            content += '<li>'+ replaceTags(item) +'</li>\n' 
+            content += '<li>'+ replaceTags(item) +'</li>\n'
         }
         //
         // polish it off
@@ -461,7 +476,7 @@ function processSlideDeck(deck){
       }
       return count;
     }
-
+	// count eqaulity operator for adding to overview list
     function numberOfEqual(text) {
       var count = 0;
       var index = 0;
@@ -473,7 +488,8 @@ function processSlideDeck(deck){
 
     function replaceTags(str) {
         /*
-        The regex is: n.b does not support nested tags
+	        n.b does not support nested tags
+        The regex is: 
         /\\(.+?)\{(.+?)\}/g
         \\ matches backslash
         (.+?) matches and captures anything (as few chars as possible, so up to the first })
@@ -497,6 +513,9 @@ function processSlideDeck(deck){
             }
              else if(tag==='tube') {
                 return '\t<iframe width="560" height="315" src="'+content+'" frameborder="0" allowfullscreen></iframe>'
+            }
+            else if(tag==='site') {
+	            return '\t<iframe class="frame" width=80% height=400 src="'+content+'"><a href="'+content+'"></a></iframe>'
             }
             return '<'+tag+'>' + content + '</'+tag+'>';
         });

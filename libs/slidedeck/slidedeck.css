@@ -19,7 +19,7 @@ body {
 header {
     padding:2em;
     width:100%;
-    background-image: url(../../img/DSC00451.JPG);
+    background-image: url();
 }
 
 #container {
@@ -87,17 +87,19 @@ a:visited {
     transition-duration: 0.2s;
 }
 
-pre {
-	line-height: 1.5;
-	font-size: 24px;
-	color: pink  ;
+
+
+
+
+
+.slide-box h1, h2, h3, h4, h5, h6 {
+	color:black;
 }
 
-
-
-
-h1, h2, h3, h4, h5, h6 {
+.slide-box h2 {
 	color:gray;
+}.slide-box-present h2{
+	color:white;
 }
 
 /* The main slide bix section*/
@@ -125,14 +127,31 @@ h1, h2, h3, h4, h5, h6 {
 	list-style-position:outside;
 
 }.slide-box ul ul{
-
+	list-style: circle;
+	font-size: 90%;
+	color: gray ;
+}..slide-box ul ul{
 	list-style: circle;
 	font-size: 90%;
 	color: orange ;
-}.slide-box em {
-	color: magenta;
-} 
+}
 
+.slide-box em {
+	color: magenta;
+}.slide-box-present em {
+	color: magenta;
+}
+
+	/*.slide-box pre {
+		line-height: 1.5;
+		font-size: 1.2em;
+		color: orange  ;
+	}.slide-box-present pre{
+		line-height: 1.5;
+		font-size: 1.2em;
+		color: pink  ;
+	}
+*/
 .slide-box td {padding-left:3px;}
 .slide-box tr:nth-child(even) {background: #CCC}
 .slide-box tr:nth-child(odd) {background: #FFF}

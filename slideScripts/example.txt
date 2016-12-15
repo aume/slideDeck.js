@@ -5,20 +5,17 @@ and Interactive Web-Based Course Content
 
 
 +limg
-==Context
-Lecture Slides
-	Creating
-	Disseminating
-	Updating
+==What
+SlideDeck is a presentation authoring system based around HTML5 and a simple scripting language. 
+This document describes:
+	the operation of the system
+	slide types
+	syntax
 -img/powerPoint.png
 
 +list
-=Slide Deck Lifecycle 
-Research
-Synthesizing information
-Creating or sourcing assets
-Crafting and refining slides
-Slide maintenance 
+=Slide Deck System
+
 
 +limg
 =Existing Systems
